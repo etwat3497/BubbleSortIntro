@@ -9,7 +9,7 @@ package bubblesortintro;
 
 public class BubbleSortIntro {
   public static void main(String[] args) {
-    int nums[] = {22, 30, 15, 1, 7, 87, 65, 24, 22, 0};
+    double nums[] = {22.20, 30.56, 15.56, 1.07, 7.97, 87.76, 65.34, 24.60, 22.21, 0};
 
     //print out unsorted list
     for (int count = 0; count < nums.length; count++) {
@@ -26,7 +26,7 @@ public class BubbleSortIntro {
     }
   }
 
-  public static void bubbleSort(int data[]) {
+  public static void bubbleSort(double data[]) {
     int counter;
     //Loop to control number of passes
     for (int pass = 1; pass < data.length; pass++) {
@@ -34,15 +34,15 @@ public class BubbleSortIntro {
       for (int element=0;element<data.length-1;element++) {
         //compare side-by-side elements and swap them if
         //first element is greater than second element
-        if (data[element] > data[element + 1]) {
+        if (data[element] > data[element + 1]) { //If you want it to go from greatest to least flip to less than symbol
           swap(data, element, element + 1);  //call swap method
         }
       }
     }
   }
 
-  public static void swap(int array2[], int first, int second) {
-    int hold = array2[first];
+  public static void swap(double array2[], int first, int second) {
+    double hold = array2[first];
     array2[first] = array2[second];
     array2[second] = hold;
   }
